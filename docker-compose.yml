@@ -4,8 +4,9 @@ services:
   wordpress:
     image: wordpress:latest
     # using volumes only during development
-    # volumes:
-    #   - .:/var/www/html
+    volumes:
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - .:/var/www/html
     ports:
       - "$PORT:80"
     restart: always
