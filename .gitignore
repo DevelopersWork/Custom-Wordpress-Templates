@@ -1,6 +1,6 @@
 
 .env
-.htaccess.bk
+.htaccess*
 
 license.txt
 readme.html
