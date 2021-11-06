@@ -7,3 +7,9 @@
 # dynamically generated, and should only be modified via WordPress filters.
 # Any changes to the directives between these markers will be overwr<IfModu
 # END WordPress
+<IfModule mod_env.c>
+    SetEnv WORDPRESS_DB_HOST localhost
+    SetEnv WORDPRESS_DB_USER db_user
+    SetEnv WORDPRESS_DB_PASSWORD db_password
+    SetEnv WORDPRESS_DB_NAME db
+</IfModule>
