@@ -4,8 +4,8 @@ services:
   wordpress:
     image: wordpress:latest
     # using volumes only during development
-    # volumes:
-    #   - .:/var/www/html
+    volumes:
+      - .:/var/www/html
     ports:
       - "$PORT:80"
     restart: always

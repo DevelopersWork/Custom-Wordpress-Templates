@@ -1,0 +1,11 @@
+
+.env
+.htaccess*
+
+license.txt
+readme.html
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
