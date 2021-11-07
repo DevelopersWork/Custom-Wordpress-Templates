@@ -1,11 +1,12 @@
 
 # # Directories
-*
-!.gitignore
-!akismet
-!jetpack
-!litespeed-cache
-!updraftplus
+# !.gitignore
+# !akismet
+# !jetpack
+# !really-simple-ssl
+# !litespeed-cache
+# !updraftplus
+# !wp-content-pilot
 
 # Files
-!index.php
+# !index.php
