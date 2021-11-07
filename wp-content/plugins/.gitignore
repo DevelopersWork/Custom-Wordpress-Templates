@@ -1,2 +1,11 @@
-# # Files
-# index.php
+
+# # Directories
+*
+!.gitignore
+!akismet
+!jetpack
+!litespeed-cache
+!updraftplus
+
+# Files
+!index.php
