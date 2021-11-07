@@ -129,5 +129,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
 
+## Disable Editing in Dashboard
+define('DISALLOW_FILE_EDIT', true);
+
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';

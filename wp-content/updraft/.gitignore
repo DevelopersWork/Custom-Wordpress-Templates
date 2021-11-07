@@ -1,0 +1,9 @@
+
+# # Directories
+# themes
+# upgrade
+# uploads
+
+# Files
+log*
+backup*
