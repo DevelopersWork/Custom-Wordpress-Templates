@@ -17,9 +17,9 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # Kill PHP Execution
-<Files ~ "\.ph(?:p[345]?|t|tml)$">
-   deny from all
-</Files>
+# <Files ~ "\.ph(?:p[345]?|t|tml)$">
+#    deny from all
+# </Files>
 
 # END WordPress
 
