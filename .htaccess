@@ -20,6 +20,9 @@ RewriteRule . /index.php [L]
 # <Files ~ "\.ph(?:p[345]?|t|tml)$">
 #    deny from all
 # </Files>
+<Files ~ "\.(dev)$">
+   deny from all
+</Files>
 
 # END WordPress
 
