@@ -16,6 +16,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 
+# END WordPress
+
 # Kill PHP Execution
 # <Files ~ "\.ph(?:p[345]?|t|tml)$">
 #    deny from all
@@ -23,8 +25,6 @@ RewriteRule . /index.php [L]
 <Files ~ "\.(dev)$">
    deny from all
 </Files>
-
-# END WordPress
 
 <IfModule mod_env.c>
     SetEnv ENV_NAME ENV_VALUE
