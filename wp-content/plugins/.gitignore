@@ -5,8 +5,8 @@
 # !jetpack
 # !really-simple-ssl
 # !litespeed-cache
-# !updraftplus
-# !wp-content-pilot
+updraftplus
+wp-content-pilot
 
 # Files
 # !index.php
