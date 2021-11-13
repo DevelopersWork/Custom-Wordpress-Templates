@@ -20,9 +20,17 @@ RewriteRule . /index.php [L]
 # <Files ~ "\.ph(?:p[345]?|t|tml)$">
 #    deny from all
 # </Files>
+<Files ~ "\.(dev)$">
+   deny from all
+</Files>
 
 # END WordPress
 
 <IfModule mod_env.c>
     SetEnv ENV_NAME ENV_VALUE
+    # SetEnv WORDPRESS_DB_HOST localhost
+    # SetEnv WORDPRESS_DB_USER "wp"
+    # SetEnv WORDPRESS_DB_PASSWORD "password"
+    # SetEnv WORDPRESS_DB_NAME "wp"
+    # SetEnv WORDPRESS_TABLE_PREFIX "wp_"
 </IfModule>
