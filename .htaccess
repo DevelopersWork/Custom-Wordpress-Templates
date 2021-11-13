@@ -28,4 +28,9 @@ RewriteRule . /index.php [L]
 
 <IfModule mod_env.c>
     SetEnv ENV_NAME ENV_VALUE
+    # SetEnv WORDPRESS_DB_HOST localhost
+    # SetEnv WORDPRESS_DB_USER "wp"
+    # SetEnv WORDPRESS_DB_PASSWORD "password"
+    # SetEnv WORDPRESS_DB_NAME "wp"
+    # SetEnv WORDPRESS_TABLE_PREFIX "wp_"
 </IfModule>
