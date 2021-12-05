@@ -1,4 +1,4 @@
-FROM wordpress:latest
+FROM wordpress:5.8.2-php7.4-apache
 
 RUN curl -s https://getcomposer.org/installer > /etc/composer.phar | php
 RUN alias composer='php /etc/composer.phar'
