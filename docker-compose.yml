@@ -2,8 +2,7 @@ version: "3.9"
 
 services:
   wordpress:
-    image: custom_wordpress
-    container_name: wp_development
+    image: custom_wordpress_template
     build:
       context: .
       dockerfile: Dockerfile
