@@ -3,8 +3,8 @@
 *
 !.gitignore
 !akismet
-# !jetpack
-# !really-simple-ssl
+!jetpack
+!really-simple-ssl
 !litespeed-cache
 !updraftplus
 
