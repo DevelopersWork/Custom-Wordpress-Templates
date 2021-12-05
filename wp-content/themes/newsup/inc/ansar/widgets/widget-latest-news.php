@@ -50,17 +50,16 @@ if (!class_exists('Newsup_Latest_Post')) :
             // open the widget container
             echo $args['before_widget'];
             ?>
-            <?php if (!empty($title) || !empty($subtitle)): ?>
              <!-- mg-posts-sec mg-posts-modul-6 -->
             <div class="mg-posts-sec mg-posts-modul-6">
+                <?php if (!empty($title)): ?>
                 <!-- mg-sec-title -->
                 <div class="mg-sec-title">
-                <?php if (!empty($title)): ?>
                     <h4><?php echo esc_html($title); ?></h4>
-                <?php endif; ?>
                 </div>
                 <!-- // mg-sec-title -->
                 <?php endif; ?>
+                
                 <?php
                 $all_posts = newsup_get_posts($number_of_posts, $category);
                 ?>

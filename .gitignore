@@ -9,3 +9,4 @@ readme.html
 *.log
 *.sql
 *.sqlite
+*-lock.json
