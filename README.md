@@ -1,4 +1,4 @@
-# WORDPRESS SITES
+# CUSTOM WORDPRESS TEMPLATE
 
 Required environment variables are
 > PORT
@@ -10,3 +10,5 @@ Required environment variables are
 > WORDPRESS_DB_PASSWORD
 
 > WORDPRESS_DB_NAME
+
+> WORDPRESS_TABLE_PREFIX
