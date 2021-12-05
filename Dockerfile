@@ -1,0 +1,18 @@
+FROM wordpress:5.8.2-php7.4-apache
+
+RUN curl -s https://getcomposer.org/installer > /etc/composer.phar | php
+RUN alias composer='php /etc/composer.phar'
+
+RUN apt-get update
+RUN apt-get install -y npm
+
+WORKDIR "/var/www/html"
+
+ENV WORDPRESS_DB_HOST=$WORDPRESS_DB_HOST
+ENV WORDPRESS_DB_USER=$WORDPRESS_DB_USER
+ENV WORDPRESS_DB_PASSWORD=$WORDPRESS_DB_PASSWORD
+ENV WORDPRESS_DB_NAME=$WORDPRESS_DB_NAME
+ENV WORDPRESS_TABLE_PREFIX=$WORDPRESS_TABLE_PREFIX
+ENV WORDPRESS_DEBUG=$WORDPRESS_DEBUG
+
+ENV NODE_ENV=dev
