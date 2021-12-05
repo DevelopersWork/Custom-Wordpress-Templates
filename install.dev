@@ -1,2 +1,0 @@
-$curl -s https://getcomposer.org/installer | php
-$alias composer='php composer.phar'
