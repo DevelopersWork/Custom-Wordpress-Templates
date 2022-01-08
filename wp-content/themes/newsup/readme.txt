@@ -4,7 +4,7 @@ Author: Themeansar
 Requires at least: WordPress 4.7
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 2.9.9.84
+Stable tag: 2.9.9.86
 Version: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -458,3 +458,9 @@ License: CC0 Public Domain
 
 = Version 2.9.9.84
 * Fixed latest news widget title issue.
+
+= Version 2.9.9.85
+* Fixed comment style issue.
+
+= Version 2.9.9.86
+* Fixed escaping issue.

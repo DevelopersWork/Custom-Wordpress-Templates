@@ -135,3 +135,6 @@ define('DISALLOW_FILE_EDIT', true);
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+/** Disabling Wordpress Cron Jobs */
+define('DISABLE_WP_CRON', true);
