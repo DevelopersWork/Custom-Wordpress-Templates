@@ -5,8 +5,13 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa7
 RUN php composer-setup.php --install-dir=/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get update
-RUN apt-get install -y npm
+RUN apt-get -y upgrade
+
+RUN apt-get install -y nodejs
+
+RUN npm install create-react-app
 
 WORKDIR "/var/www/html"
 
