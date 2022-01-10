@@ -11,7 +11,7 @@ RUN apt-get -y upgrade
 
 RUN apt-get install -y nodejs
 
-RUN npm install create-react-app
+RUN npm install -g create-react-app
 
 WORKDIR "/var/www/html"
 

@@ -12,6 +12,7 @@ services:
       - .:/var/www/html
     ports:
       - "$PORT:80"
+      - "3000:3000"
     restart: always
     environment:
       WORDPRESS_DB_HOST: $WORDPRESS_DB_HOST
