@@ -4,7 +4,7 @@ Tags: blog, portfolio, news, grid-Layout, one-column, two-columns, three-columns
 Requires at least: 5.7
 Requires PHP: 7
 Tested up to: 5.8
-Stable tag: 0.3
+Stable tag: 0.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -62,3 +62,6 @@ Newsbit includes support for WooCommerce and Contact From 7.
 
 = 0.3 =
 * Update theme URI.
+
+= 0.4 =
+* Update Font Awesome Library.

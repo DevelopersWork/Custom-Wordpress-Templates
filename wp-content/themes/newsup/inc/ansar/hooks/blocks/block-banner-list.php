@@ -20,7 +20,7 @@ if ($newsup_all_posts_main->have_posts()) :
                 <a class="link-div" href="<?php the_permalink(); ?>"> </a>
 
                 <article class="bottom">
-                        <span class="post-form"><i class="fa fa-camera"></i></span>
+                        <span class="post-form"><i class="fas fa-camera"></i></span>
                         <div class="mg-blog-category"> <?php newsup_post_categories(); ?> </div>
                         <h4 class="title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                         <?php newsup_post_meta(); ?>

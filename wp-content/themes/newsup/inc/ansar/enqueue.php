@@ -8,7 +8,9 @@
 
 	wp_enqueue_style('newsup-default', get_template_directory_uri() . '/css/colors/default.css');
 
-	wp_enqueue_style('font-awesome',get_template_directory_uri().'/css/font-awesome.css');
+	wp_enqueue_style('font-awesome-5-all',get_template_directory_uri().'/css/font-awesome/css/all.min.css');
+
+	wp_enqueue_style('font-awesome-4-shim',get_template_directory_uri().'/css/font-awesome/css/v4-shims.min.css');
 
 	wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css');
 	

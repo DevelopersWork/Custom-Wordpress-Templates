@@ -284,7 +284,7 @@ if ( $post_image_type == 'newsup_post_img_hei' ) {
 if($url) { ?>
 <div class="col-12 col-md-6">
     <div class="mg-post-thumb back-img md" style="background-image: url('<?php echo esc_url($url); ?>');">
-        <span class="post-form"><i class="fa fa-camera"></i></span>
+        <span class="post-form"><i class="fas fa-camera"></i></span>
         <a class="link-div" href="<?php the_permalink(); ?>"></a>
     </div> 
 </div>
@@ -298,7 +298,7 @@ if(has_post_thumbnail()) { ?>
 <?php echo '<a href="'.esc_url(get_the_permalink()).'">';
      the_post_thumbnail( '', array( 'class'=>'img-responsive' ) );
     echo '</a>'; ?>
-        <span class="post-form"><i class="fa fa-camera"></i></span>
+        <span class="post-form"><i class="fas fa-camera"></i></span>
         </div>
 </div> <?php } 
 } 
@@ -374,23 +374,23 @@ function newsup_social_share_post($post) {
                           <div class="post-share-icons cf">
                            
                               <a href="<?php echo esc_url("$facebook_url"); ?>" class="link facebook" target="_blank" >
-                                <i class="fa fa-facebook"></i></a>
+                                <i class="fab fa-facebook"></i></a>
                             
             
                               <a href="<?php echo esc_url("$twitter_url"); ?>" class="link twitter" target="_blank">
-                                <i class="fa fa-twitter"></i></a>
+                                <i class="fab fa-twitter"></i></a>
             
                               <a href="<?php echo esc_url("$email_url"); ?>" class="link email" target="_blank" >
-                                <i class="fa fa-envelope-o"></i></a>
+                                <i class="fas fa-envelope"></i></a>
 
 
                               <a href="<?php echo esc_url("$linkedin_url"); ?>" class="link linkedin" target="_blank" >
-                                <i class="fa fa-linkedin"></i></a>
+                                <i class="fab fa-linkedin"></i></a>
 
                              <a href="<?php echo esc_url("$telegram_url"); ?>" class="link telegram" target="_blank" >
-                                <i class="fa fa-telegram"></i></a>
+                                <i class="fab fa-telegram"></i></a>
 
-                              <a href="javascript:pinIt();" class="link pinterest"><i class="fa fa-pinterest"></i></a>    
+                              <a href="javascript:pinIt();" class="link pinterest"><i class="fab fa-pinterest"></i></a>    
                           </div>
                     </div>
 

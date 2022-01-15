@@ -11,7 +11,8 @@ services:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - .:/var/www/html
     ports:
-      - "$PORT:80"
+      - "80:80"
+      - "8080:8080"
       - "3000:3000"
     restart: always
     environment:

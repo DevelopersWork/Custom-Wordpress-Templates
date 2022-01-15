@@ -26,7 +26,7 @@
                         <div class="mg-blog-post lg back-img" style="background-image: url('<?php echo esc_url($foodup_url); ?>');">
                                         <a class="link-div" href="<?php echo the_permalink(); ?>"> </a>
                         <article class="bottom">
-                            <span class="post-form"><i class="fa fa-camera"></i></span>
+                            <span class="post-form"><i class="fas fa-camera"></i></span>
                                 <div class="mg-blog-category"> <?php newsup_post_categories(); ?> </div>
                                 <h4 class="title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                         <?php newsup_post_meta(); ?>
@@ -50,7 +50,7 @@
                         <div class="mg-blog-post lg back-img" style="background-image: url('<?php echo esc_url($newsbit_url); ?>');">
                                         <a class="link-div" href="<?php echo the_permalink(); ?>"> </a>
                         <article class="bottom">
-                            <span class="post-form"><i class="fa fa-camera"></i></span>
+                            <span class="post-form"><i class="fas fa-camera"></i></span>
                                 <div class="mg-blog-category"> <?php newsup_post_categories(); ?> </div>
                                 <h4 class="title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                         <?php newsup_post_meta(); ?>
@@ -142,7 +142,7 @@ if (!function_exists('newsbit_banner_tabbed_posts')):
                         <div class="mg-blog-post lg back-img" style="background-image: url('<?php echo esc_url($foodup_url); ?>');">
                                         <a class="link-div" href="<?php echo the_permalink(); ?>"> </a>
                         <article class="bottom">
-                            <span class="post-form"><i class="fa fa-camera"></i></span>
+                            <span class="post-form"><i class="fas fa-camera"></i></span>
                                 <div class="mg-blog-category"> <?php newsup_post_categories(); ?> </div>
                                 <h4 class="title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                         <?php newsup_post_meta(); ?>
@@ -166,7 +166,7 @@ if (!function_exists('newsbit_banner_tabbed_posts')):
                         <div class="mg-blog-post lg back-img" style="background-image: url('<?php echo esc_url($newsbit_url); ?>');">
                                         <a class="link-div" href="<?php echo the_permalink(); ?>"> </a>
                         <article class="bottom">
-                            <span class="post-form"><i class="fa fa-camera"></i></span>
+                            <span class="post-form"><i class="fas fa-camera"></i></span>
                                 <div class="mg-blog-category"> <?php newsup_post_categories(); ?> </div>
                                 <h4 class="title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                         <?php newsup_post_meta(); ?>
