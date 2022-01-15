@@ -4,10 +4,9 @@ on:
       - release/development
 name: 🚀 Deploy Wordpress on Push
 jobs:
-  development-deploy:
+  development_deploy:
     name: 🎉 Development Deploy
     environment: development
-    timeout-minutes: 720
     env:
       DEVELOPMENT_FTP_SERVER: ${{ secrets.FTP_SERVER }}
       DEVELOPMENT_FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -23,6 +22,90 @@ jobs:
         server: ${{ env.DEVELOPMENT_FTP_SERVER }}
         username: ${{ env.DEVELOPMENT_FTP_USERNAME }}
         password: ${{ env.DEVELOPMENT_FTP_PASSWORD }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.vscode*/**
+          **/.github*/**
+          **/.htaccess*/**
+          **/wp-admin/**
+          **/wp-content/**
+          **/wp-includes/**
+  wp-admin_development_deploy:
+    name: 🎉 wp-admin Development Deploy
+    environment: development
+    env:
+      DEVELOPMENT_FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      DEVELOPMENT_FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      DEVELOPMENT_FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: ${{ env.DEVELOPMENT_FTP_SERVER }}
+        username: ${{ env.DEVELOPMENT_FTP_USERNAME }}
+        password: ${{ env.DEVELOPMENT_FTP_PASSWORD }}
+        local-dir: ./wp-admin/
+        server-dir: wp-admin/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.vscode*/**
+          **/.github*/**
+          **/.htaccess*/**
+  wp-content_development_deploy:
+    name: 🎉 wp-content Development Deploy
+    environment: development
+    env:
+      DEVELOPMENT_FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      DEVELOPMENT_FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      DEVELOPMENT_FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: ${{ env.DEVELOPMENT_FTP_SERVER }}
+        username: ${{ env.DEVELOPMENT_FTP_USERNAME }}
+        password: ${{ env.DEVELOPMENT_FTP_PASSWORD }}
+        local-dir: ./wp-content/
+        server-dir: wp-content/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.vscode*/**
+          **/.github*/**
+          **/.htaccess*/**
+  wp-includes_development_deploy:
+    name: 🎉 wp-includes Development Deploy
+    environment: development
+    env:
+      DEVELOPMENT_FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      DEVELOPMENT_FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      DEVELOPMENT_FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: ${{ env.DEVELOPMENT_FTP_SERVER }}
+        username: ${{ env.DEVELOPMENT_FTP_USERNAME }}
+        password: ${{ env.DEVELOPMENT_FTP_PASSWORD }}
+        local-dir: ./wp-includes/
+        server-dir: wp-includes/
         exclude: |
           **/.git*
           **/.git*/**
