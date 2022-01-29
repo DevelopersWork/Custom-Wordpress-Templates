@@ -1,4 +1,6 @@
 
+tmp/mysql
+
 .env
 .htaccess_*
 

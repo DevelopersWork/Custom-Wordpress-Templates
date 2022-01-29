@@ -5,14 +5,6 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa7
 RUN php composer-setup.php --install-dir=/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get update
-RUN apt-get -y upgrade
-
-RUN apt-get install -y nodejs
-
-RUN npm install -g create-react-app
-
 WORKDIR "/var/www/html"
 
 ENV WORDPRESS_DB_HOST=$WORDPRESS_DB_HOST
@@ -22,4 +14,4 @@ ENV WORDPRESS_DB_NAME=$WORDPRESS_DB_NAME
 ENV WORDPRESS_TABLE_PREFIX=$WORDPRESS_TABLE_PREFIX
 ENV WORDPRESS_DEBUG=$WORDPRESS_DEBUG
 
-ENV NODE_ENV=dev
+ENV NODE_ENV=development

@@ -1,12 +1,27 @@
 version: "3.9"
 
+# This is only for development purposes.
 services:
+  mysql:
+    image: mysql:5.7
+    container_name: developerswork-wp-mysql
+    volumes:
+      - ./tmp/mysql:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: $WORDPRESS_DB_PASSWORD
+      MYSQL_DATABASE: $WORDPRESS_DB_NAME
+      MYSQL_USER: $WORDPRESS_DB_USER
+      MYSQL_PASSWORD: $WORDPRESS_DB_PASSWORD
+
   wordpress:
-    image: custom_wordpress_template
+    depends_on:
+      - mysql
+    image: wordpress_workspace
+    container_name: developerswork-wp-workspace
     build:
       context: .
       dockerfile: Dockerfile
-    # using volumes only during development
     volumes:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - .:/var/www/html
