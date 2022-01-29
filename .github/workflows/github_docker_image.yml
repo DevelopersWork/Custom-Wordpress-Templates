@@ -7,9 +7,9 @@ name: Create a Docker image
 
 on:
   push:
-    branches: ['master']
+    branches: ['release/master']
   pull_request:
-    branches: ['master']
+    branches: ['release/master']
 
 env:
   REGISTRY: ghcr.io
