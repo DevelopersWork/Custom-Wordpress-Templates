@@ -66,14 +66,14 @@ if (!class_exists('Newsup_Tab_Posts')) :
                             <a href="#<?php echo esc_attr($tab_id); ?>-recent"
                                aria-controls="<?php esc_attr_e('Recent', 'newsup'); ?>" role="tab"
                                data-toggle="tab" class="font-family-1">
-                                <i class="fa fa-bolt" aria-hidden="true"></i>  <?php echo esc_html($latest_title); ?>
+                                <i class="fas fa-bolt" aria-hidden="true"></i>  <?php echo esc_html($latest_title); ?>
                             </a>
                         </li>
                         <li role="presentation" class="tab tab-popular">
                             <a href="#<?php echo esc_attr($tab_id); ?>-popular"
                                aria-controls="<?php esc_attr_e('Popular', 'newsup'); ?>" role="tab"
                                data-toggle="tab" class="font-family-1">
-                                <i class="fa fa-clock-o" aria-hidden="true"></i>  <?php echo esc_html($popular_title); ?>
+                                <i class="fas fa-clock" aria-hidden="true"></i>  <?php echo esc_html($popular_title); ?>
                             </a>
                         </li>
 
@@ -82,7 +82,7 @@ if (!class_exists('Newsup_Tab_Posts')) :
                                 <a href="#<?php echo esc_attr($tab_id); ?>-categorised"
                                    aria-controls="<?php esc_attr_e('Categorised', 'newsup'); ?>" role="tab"
                                    data-toggle="tab" class="font-family-1">
-                                   <i class="fa fa-fire" aria-hidden="true"></i>  <?php echo esc_html($categorised_title); ?>
+                                   <i class="fas fa-fire" aria-hidden="true"></i>  <?php echo esc_html($categorised_title); ?>
                                 </a>
                             </li>
                         <?php endif; ?>

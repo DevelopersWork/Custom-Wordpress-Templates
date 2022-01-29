@@ -55,14 +55,14 @@
                     <?php } ?>
                     <?php $newsup_single_post_date = esc_attr(get_theme_mod('newsup_single_post_date','true'));
                     if($newsup_single_post_date == true){ ?>
-                    <span class="mg-blog-date"><i class="fa fa-clock-o"></i> 
+                    <span class="mg-blog-date"><i class="fas fa-clock"></i> 
                       <?php echo get_the_date('M'); ?> <?php echo get_the_date('j,'); ?> <?php echo get_the_date('Y'); ?></span>
                     <?php }
                     $newsup_single_post_tag = esc_attr(get_theme_mod('newsup_single_post_tag','true'));
                     if($newsup_single_post_tag == true){
                     $tag_list = get_the_tag_list();
                     if($tag_list){ ?>
-                    <span class="newsup-tags"><i class="fa fa-tag"></i>
+                    <span class="newsup-tags"><i class="fas fa-tag"></i>
                       <a href="<?php the_permalink(); ?>"><?php the_tags('', ', ', ''); ?></a>
                     </span>
                   <?php } } ?>
@@ -82,8 +82,8 @@
                 <div class="clearfix mb-3"></div>
                 <?php
             the_post_navigation(array(
-                'prev_text' => '%title <div class="fa fa-angle-double-right"></div><span></span>',
-                'next_text' => '<div class="fa fa-angle-double-left"></div><span></span> %title',
+                'prev_text' => '%title <div class="fas fa-angle-double-right"></div><span></span>',
+                'next_text' => '<div class="fas fa-angle-double-left"></div><span></span> %title',
                 'in_same_term' => true,
             ));
             ?>
@@ -154,13 +154,13 @@
                                             <?php $newsup_enable_single_post_date = esc_attr(get_theme_mod('newsup_enable_single_post_date','true'));
                                                 if($newsup_enable_single_post_date == true){
                                             ?>
-                                              <span class="mg-blog-date"><i class="fa fa-clock-o"></i> 
+                                              <span class="mg-blog-date"><i class="fas fa-clock"></i> 
                                               <?php echo get_the_date('M'); ?> <?php echo get_the_date('j,'); ?> <?php echo get_the_date('Y'); ?></span>
                                             <?php } $newsup_enable_single_post_admin = esc_attr(get_theme_mod('newsup_enable_single_post_admin','true'));
                                               if($newsup_enable_single_post_admin == true) {?>
-                                            <a href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ));?>"> <i class="fa fa-user-circle-o"></i> <?php the_author(); ?></a>
+                                            <a href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ));?>"> <i class="fas fa-user-circle"></i> <?php the_author(); ?></a>
                                             <?php } ?> </div>
-                                            <?php edit_post_link( __( 'Edit', 'newsup' ), '<span class="post-edit-link"><i class="fa fa-edit"></i>', '</span>' ); ?>
+                                            <?php edit_post_link( __( 'Edit', 'newsup' ), '<span class="post-edit-link"><i class="fas fa-edit"></i>', '</span>' ); ?>
                                         </div>
                                     </div>
                                   </div>

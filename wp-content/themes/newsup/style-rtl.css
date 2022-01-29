@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 2.9.9.75
+Version: 2.9.9.89
 Tested up to: 5.7
 Requires PHP: 5.6
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -627,7 +627,8 @@ blockquote::before {
 	content: "\f10d";
 	display: table;
 	float: left;
-	font-family: "FontAwesome";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
 	font-size: 28px;
 	margin-top: 6px;
 	font-weight: normal;
@@ -747,7 +748,8 @@ button.mfp-close:hover, button.mfp-close:focus {
 }
 .mg-tpt-txnlst strong:before {
     content: '\f292';
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Free";
+	font-weight: 900;
     font-size: 12px;
     padding: 0 5px;
 }
@@ -1289,7 +1291,8 @@ li.active.home {
 }
 .mg-latest-news .mg-latest-news-slider a::before {
     content: "\f0a9";
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Free";
+	font-weight: 900;
     font-size: 14px;
     margin-right: 4px;
 }
@@ -1729,7 +1732,8 @@ li.active.home {
 }
 .mg-page-breadcrumb > li + li:before {
 	content: "\f178";
-	font-family: fontawesome;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
 	padding: 0 5px;
 }
 /* --------------------------------------

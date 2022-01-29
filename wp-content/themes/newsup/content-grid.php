@@ -25,8 +25,8 @@
         <div class="col-md-12 text-center d-md-flex justify-content-center">
             <?php //Previous / next page navigation
                     the_posts_pagination( array(
-                    'prev_text'          => '<i class="fa fa-angle-left"></i>',
-                    'next_text'          => '<i class="fa fa-angle-right"></i>',
+                    'prev_text'          => '<i class="fas fa-angle-left"></i>',
+                    'next_text'          => '<i class="fas fa-angle-right"></i>',
                     ) ); 
             ?>
         </div>

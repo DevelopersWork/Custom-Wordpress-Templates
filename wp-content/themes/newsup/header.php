@@ -63,10 +63,10 @@
           <!-- Right nav -->
                     <div class="m-header d-flex pl-3 ml-auto my-2 my-lg-0 position-relative align-items-center">
                         <?php $home_url = home_url(); ?>
-                        <a class="mobilehomebtn" href="<?php echo esc_url($home_url); ?>"><span class="fa fa-home"></span></a>
+                        <a class="mobilehomebtn" href="<?php echo esc_url($home_url); ?>"><span class="fas fa-home"></span></a>
                         <!-- navbar-toggle -->
                         <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbar-wp" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <i class="fa fa-bars"></i>
+                          <i class="fas fa-bars"></i>
                         </button>
                         <!-- /navbar-toggle -->
                         <?php $header_search_enable = get_theme_mod('header_search_enable','true');
@@ -74,7 +74,7 @@
                         ?>
                         <div class="dropdown show mg-search-box pr-2">
                             <a class="dropdown-toggle msearch ml-auto" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               <i class="fa fa-search"></i>
+                               <i class="fas fa-search"></i>
                             </a>
 
                             <div class="dropdown-menu searchinner" aria-labelledby="dropdownMenuLink">

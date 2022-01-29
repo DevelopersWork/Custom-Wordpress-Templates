@@ -70,7 +70,7 @@ if (!class_exists('Newsup_Posts_Slider')) :
                             <div class="mg-blog-post lg back-img" style="background-image: url('<?php echo esc_url($url); ?>');">
                                 <a class="link-div" href="<?php the_permalink(); ?>"></a>
                                 <article class="bottom">
-                                <span class="post-form"><i class="fa fa-camera"></i></span>
+                                <span class="post-form"><i class="fas fa-camera"></i></span>
                                     <div class="mg-blog-category">
                                         <?php newsup_post_categories(); ?>
                                     </div>
