@@ -13,6 +13,16 @@ services:
       MYSQL_USER: $WORDPRESS_DB_USER
       MYSQL_PASSWORD: $WORDPRESS_DB_PASSWORD
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: $WORDPRESS_DB_HOST
+      PMA_USER: root
+      PMA_PASSWORD: $WORDPRESS_DB_PASSWORD
+    ports:
+      - "8080:80"
+
   wordpress:
     links:
       - mysql:mysql
