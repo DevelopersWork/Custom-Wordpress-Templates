@@ -3,7 +3,7 @@
 A customised wordpress for easy developing and deploying.
 
 ## Environment Variables
-> PORT
+> WORDPRESS_PORT 
 
 > WORDPRESS_DB_HOST
 

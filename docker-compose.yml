@@ -4,7 +4,6 @@ version: "3.9"
 services:
   mysql:
     image: mysql:5.7
-    container_name: developerswork-wp-mysql
     volumes:
       - ./tmp/mysql:/var/lib/mysql
     restart: always
@@ -15,10 +14,9 @@ services:
       MYSQL_PASSWORD: $WORDPRESS_DB_PASSWORD
 
   wordpress:
-    depends_on:
-      - mysql
+    links:
+      - mysql:mysql
     image: wordpress_workspace
-    container_name: developerswork-wp-workspace
     build:
       context: .
       dockerfile: Dockerfile
@@ -26,9 +24,7 @@ services:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - .:/var/www/html
     ports:
-      - "80:80"
-      - "8080:8080"
-      - "3000:3000"
+      - "$WORDPRESS_PORT:80"
     restart: always
     environment:
       WORDPRESS_DB_HOST: $WORDPRESS_DB_HOST
