@@ -5,8 +5,8 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa7
 RUN php composer-setup.php --install-dir=/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
-COPY . /var/www/html/
-COPY ./uploads.ini /usr/local/etc/php/conf.d/uploads.ini
+ADD . /var/www/html/
+ADD ./uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
 WORKDIR "/var/www/html"
 
