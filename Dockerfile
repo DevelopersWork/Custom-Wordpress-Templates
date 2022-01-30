@@ -5,6 +5,7 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa7
 RUN php composer-setup.php --install-dir=/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
+COPY . /var/www/html/
 WORKDIR "/var/www/html"
 
 ENV WORDPRESS_DB_HOST=$WORDPRESS_DB_HOST
