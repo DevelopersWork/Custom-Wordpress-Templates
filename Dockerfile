@@ -11,6 +11,8 @@ ADD ./wp-content/uploads /var/www/html/wp-content/uploads
 ADD ./uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 ADD ./.htaccess /var/www/html/.htaccess
 
+RUN chown -R www-data:www-data /var/www/html/wp-content/uploads
+
 WORKDIR "/var/www/html"
 
 ENV WORDPRESS_DB_HOST=$WORDPRESS_DB_HOST
