@@ -15,3 +15,6 @@ readme.html
 *.sql
 *.sqlite
 *-lock.json
+
+# php files
+*.php
