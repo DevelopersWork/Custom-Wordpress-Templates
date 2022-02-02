@@ -7,6 +7,7 @@ RUN php -r "unlink('composer-setup.php');"
 
 ADD ./wp-content/plugins /var/www/html/wp-content/plugins
 ADD ./wp-content/themes /var/www/html/wp-content/themes
+ADD ./wp-content/uploads /var/www/html/wp-content/uploads
 ADD ./uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 ADD ./.htaccess /var/www/html/.htaccess
 
