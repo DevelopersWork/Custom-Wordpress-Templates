@@ -40,8 +40,8 @@ RewriteRule . /index.php [L]
     Header set Referrer-Policy: no-referrer-when-downgrade
 </IfModule>
 
-# Deny access to dev, css, js files
-<Files ~ "\.(dev|css|js)$">
+# Deny access to dev files
+<Files ~ "\.(dev)$">
    deny from all
 </Files>
 
