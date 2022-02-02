@@ -1,9 +1,7 @@
-
 # Directories
 upgrade
 uploads
 updraft
 
 # # Files
-!**/*.php
 index.php
