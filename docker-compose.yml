@@ -32,7 +32,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      - .:/var/www/html
+      - ./.htaccess:/var/www/html/.htaccess
+      - ./wp-content/plugins:/var/www/html/wp-content/plugins
+      - ./wp-content/themes:/var/www/html/wp-content/themes
     ports:
       - "$WORDPRESS_PORT:80"
     restart: always

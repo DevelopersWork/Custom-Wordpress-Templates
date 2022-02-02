@@ -5,8 +5,10 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa7
 RUN php composer-setup.php --install-dir=/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
-ADD . /var/www/html/
+ADD ./wp-content/plugins /var/www/html/wp-content/plugins
+ADD ./wp-content/themes /var/www/html/wp-content/themes
 ADD ./uploads.ini /usr/local/etc/php/conf.d/uploads.ini
+ADD ./.htaccess /var/www/html/.htaccess
 
 WORKDIR "/var/www/html"
 
@@ -16,5 +18,3 @@ ENV WORDPRESS_DB_PASSWORD=$WORDPRESS_DB_PASSWORD
 ENV WORDPRESS_DB_NAME=$WORDPRESS_DB_NAME
 ENV WORDPRESS_TABLE_PREFIX=$WORDPRESS_TABLE_PREFIX
 ENV WORDPRESS_DEBUG=$WORDPRESS_DEBUG
-
-ENV NODE_ENV=development
