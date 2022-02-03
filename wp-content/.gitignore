@@ -1,9 +1,5 @@
 
-# Directories
-upgrade
-uploads
-updraft
-
-# # Files
-!**/*.php
-index.php
+# files
+plugins/index.php
+plugins/hello.php
+themes/index.php
