@@ -1,12 +1,9 @@
 
+# Directories
+tmp/mysql/
+
 .env
 .htaccess_*
 
 license.txt
 readme.html
-
-# ignore log files and databases
-*.log
-*.sql
-*.sqlite
-*-lock.json

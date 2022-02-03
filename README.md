@@ -1,7 +1,9 @@
-# CUSTOM WORDPRESS TEMPLATE
+# WORDPRESS TEMPLATE
 
-Required environment variables are
-> PORT
+A customised wordpress for easy developing and deploying.
+
+## Environment Variables
+> WORDPRESS_PORT 
 
 > WORDPRESS_DB_HOST
 

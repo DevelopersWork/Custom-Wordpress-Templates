@@ -1,19 +1,42 @@
 version: "3.9"
 
+# This is only for development purposes.
 services:
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - ./tmp/mysql:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: $WORDPRESS_DB_PASSWORD
+      MYSQL_DATABASE: $WORDPRESS_DB_NAME
+      MYSQL_USER: $WORDPRESS_DB_USER
+      MYSQL_PASSWORD: $WORDPRESS_DB_PASSWORD
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: $WORDPRESS_DB_HOST
+      PMA_USER: root
+      PMA_PASSWORD: $WORDPRESS_DB_PASSWORD
+    ports:
+      - "8080:80"
+
   wordpress:
-    image: custom_wordpress_template
+    links:
+      - mysql:mysql
+    image: wordpress_workspace
     build:
       context: .
       dockerfile: Dockerfile
-    # using volumes only during development
     volumes:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      - .:/var/www/html
+      - ./.htaccess:/var/www/html/.htaccess
+      - ./wp-content/plugins:/var/www/html/wp-content/plugins
+      - ./wp-content/themes:/var/www/html/wp-content/themes
     ports:
-      - "80:80"
-      - "8080:8080"
-      - "3000:3000"
+      - "$WORDPRESS_PORT:80"
     restart: always
     environment:
       WORDPRESS_DB_HOST: $WORDPRESS_DB_HOST

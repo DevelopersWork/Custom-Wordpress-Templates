@@ -1,13 +1,2 @@
-
-# # Directories
-*
-!.gitignore
-!akismet
-!jetpack
-!really-simple-ssl
-!litespeed-cache
-!updraftplus
-!wp-crontrol
-
-# Files
-!index.php
+# Directories
+akismet/

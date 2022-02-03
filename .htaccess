@@ -18,14 +18,36 @@ RewriteRule . /index.php [L]
 
 # END WordPress
 
-# Kill PHP Execution
-# <Files ~ "\.ph(?:p[345]?|t|tml)$">
-#    deny from all
-# </Files>
+################
+### SECURITY ###
+################
+
+# X-XSS-Protection
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+# X-Frame-Options
+<IfModule mod_headers.c>
+    Header always append X-Frame-Options SAMEORIGIN
+</IfModule>
+# X-Content-Type-Options: nosniff
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options nosniff
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+    Header set Referrer-Policy: no-referrer-when-downgrade
+</IfModule>
+
+# Deny access to dev files
 <Files ~ "\.(dev)$">
    deny from all
 </Files>
 
+####################
+
+### Environment Variables ###
 <IfModule mod_env.c>
     SetEnv ENV_NAME ENV_VALUE
     # SetEnv WORDPRESS_DB_HOST localhost
