@@ -1,4 +1,6 @@
 on: 
+  push:
+    branches: ['release/development']
   pull_request:
     branches: ['release/development']
     types: [closed]
@@ -88,5 +90,6 @@ jobs:
           **/.vscode*/**
           **/.github*/**
           **/.htaccess*/**
+          **/*vendor*/**
 
           
