@@ -1,6 +1,7 @@
 
 # Directories
 tmp/mysql/
+tmp/build/
 
 .env
 .htaccess_*

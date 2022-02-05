@@ -56,3 +56,7 @@ RewriteRule . /index.php [L]
     # SetEnv WORDPRESS_DB_NAME "wp"
     # SetEnv WORDPRESS_TABLE_PREFIX "wp_"
 </IfModule>
+
+# Removes listinf directories
+# Below line must always be at end of the file
+Options -Indexes
