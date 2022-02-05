@@ -5,6 +5,3 @@ tmp/build/
 
 .env
 .htaccess_*
-
-license.txt
-readme.html
