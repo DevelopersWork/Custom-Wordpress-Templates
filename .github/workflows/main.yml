@@ -50,6 +50,7 @@ jobs:
         server: ${{ env.DEVELOPMENT_FTP_SERVER }}
         username: ${{ env.DEVELOPMENT_FTP_USERNAME }}
         password: ${{ env.DEVELOPMENT_FTP_PASSWORD }}
+        log-level: minimal
         local-dir: ./wp-content/themes/
         server-dir: wp-content/themes/
         exclude: |
@@ -77,6 +78,7 @@ jobs:
         server: ${{ env.DEVELOPMENT_FTP_SERVER }}
         username: ${{ env.DEVELOPMENT_FTP_USERNAME }}
         password: ${{ env.DEVELOPMENT_FTP_PASSWORD }}
+        log-level: minimal
         local-dir: ./wp-content/plugins/
         server-dir: wp-content/plugins/
         exclude: |
