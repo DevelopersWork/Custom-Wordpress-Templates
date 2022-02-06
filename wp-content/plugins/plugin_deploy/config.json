@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Jetpack",
+        "description": "Jetpack is made by WordPress experts to make WP sites safer and faster, and help you grow your traffic",
+        "url": "https://wordpress.org/plugins/jetpack"
+    },
+    {
+        "name": "LiteSpeed Cache",
+        "description": "LiteSpeed Cache for WordPress (LSCWP) is an all-in-one site acceleration plugin",
+        "url": "https://wordpress.org/plugins/litespeed-cache"
+    }
+]

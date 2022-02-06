@@ -33,13 +33,9 @@ services:
     volumes:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./.htaccess:/var/www/html/.htaccess
-      - ./wp-content/plugins/all-in-one-seo-pack:/var/www/html/wp-content/plugins/all-in-one-seo-pack
-      - ./wp-content/plugins/google-analytics-for-wordpress:/var/www/html/wp-content/plugins/google-analytics-for-wordpress
-      - ./wp-content/plugins/jetpack:/var/www/html/wp-content/plugins/jetpack
-      - ./wp-content/plugins/litespeed-cache:/var/www/html/wp-content/plugins/litespeed-cache
-      - ./wp-content/plugins/really-simple-ssl:/var/www/html/wp-content/plugins/really-simple-ssl
-      - ./wp-content/plugins/updraftplus:/var/www/html/wp-content/plugins/updraftplus
-      - ./wp-content/plugins/wp-crontrol:/var/www/html/wp-content/plugins/wp-crontrol
+
+      - ./wp-content/plugins/plugin_deploy:/var/www/html/wp-content/plugins/plugin_deploy
+
       - ./wp-content/themes/news-bit:/var/www/html/wp-content/themes/news-bit
       - ./wp-content/themes/newsup:/var/www/html/wp-content/themes/newsup
     ports:
